@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hotels")
 public class HotelController {
 
- 
+ //create
 
 
 
