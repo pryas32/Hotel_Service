@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservices  # Correct URL to your DB
+    username: postgres
+    password: Ankit@121  # Replace with your actual password
+    driver-class-name: org.postgresql.Driver  # Ensure driver is specified
+  jpa:
+    hibernate:
+      ddl-auto: update  # For automatic schema management
+    show-sql: true  # To log SQL queries
