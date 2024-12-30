@@ -10,6 +10,7 @@ import org.springframework.boot.context.config.ConfigDataResourceNotFoundExcepti
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service//decalred as service so that iske bean bana sake
 public class HotelServiceImpl implements HotelService {
@@ -20,6 +21,9 @@ private HotelRepository HotelRepository;
 
 @Override
     public Hotel create(Hotel hotel){
+    String hotelId= UUID.randomUUID().toString();//create id for hotel
+    hotel.setId(hotelId);//set ID for hotel entity.
+
     return HotelRepository.save(hotel);
     }
 
